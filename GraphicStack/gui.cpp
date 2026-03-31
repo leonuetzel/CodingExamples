@@ -163,7 +163,6 @@ void GUI::onUpdate_textboxDiagnostic(Element& element)
 	CMOS& cmos = CMOS::get();
 	Graphics& graphics = Graphics::get();
 	I_DisplayDriver& displayDriver = STM32H753BIT6::get().get_ltdc();
-	constexpr float percentage = 99.9f;
 	
 	textbox.set_text(String("FPS HW: ")			+ displayDriver.get_fps()													, 0);
 	textbox.set_text(String("FPS SW: ")			+ graphics.get_fps()															, 1);
